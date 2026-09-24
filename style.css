@@ -182,6 +182,15 @@ button:focus {
     margin-bottom: 24px;
 }
 
+.imagem-projeto {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid var(--cor-borda);
+    margin-bottom: 16px;
+}
+
 .cartao-projeto h3 {
     color: var(--cor-titulo);
     margin-bottom: 10px;
