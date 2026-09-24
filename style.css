@@ -1,0 +1,253 @@
+/* ============================
+   Variáveis de cor (tema dark, estilo GitHub)
+   ============================ */
+:root {
+    --cor-fundo: #0d1117;
+    --cor-fundo-secao: #161b22;
+    --cor-texto: #c9d1d9;
+    --cor-titulo: #ffffff;
+    --cor-destaque: #58a6ff;
+    --cor-destaque-hover: #79c0ff;
+    --cor-borda: #30363d;
+}
+
+/* ============================
+   Reset básico
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: var(--cor-titulo);
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 8px;
+}
+
+/* ============================
+   Cabeçalho e menu
+   ============================ */
+.cabecalho {
+    background-color: var(--cor-fundo-secao);
+    border-bottom: 1px solid var(--cor-borda);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.container-cabecalho {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--cor-titulo);
+    font-size: 1.4rem;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: var(--cor-destaque);
+}
+
+/* Foco visível para navegação por teclado */
+a:focus,
+button:focus {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+/* ============================
+   Seções gerais
+   ============================ */
+.secao {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+/* ============================
+   Apresentação (topo)
+   ============================ */
+.apresentacao {
+    text-align: center;
+    padding-top: 64px;
+}
+
+.foto-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cor-destaque);
+    margin-bottom: 20px;
+}
+
+.apresentacao h2 {
+    border: none;
+    font-size: 2rem;
+}
+
+.titulo-profissional {
+    color: var(--cor-destaque);
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+/* ============================
+   Listas (formação e competências)
+   ============================ */
+.lista-formacao,
+.lista-competencias,
+.lista-comportamental {
+    list-style: none;
+}
+
+.lista-formacao li,
+.lista-comportamental li {
+    background-color: var(--cor-fundo-secao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+}
+
+.status {
+    color: var(--cor-destaque);
+    font-size: 0.9rem;
+}
+
+.lista-competencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.lista-competencias li {
+    background-color: var(--cor-fundo-secao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 0.95rem;
+}
+
+.nivel {
+    color: var(--cor-destaque);
+    font-size: 0.8rem;
+    margin-left: 6px;
+}
+
+/* ============================
+   Projetos (lista vertical de cartões)
+   ============================ */
+.cartao-projeto {
+    background-color: var(--cor-fundo-secao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.cartao-projeto h3 {
+    color: var(--cor-titulo);
+    margin-bottom: 10px;
+}
+
+.cartao-projeto p {
+    margin-bottom: 10px;
+}
+
+/* ============================
+   Botões
+   ============================ */
+.botao {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: #0d1117;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 6px;
+    margin-top: 8px;
+    margin-right: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.botao:hover,
+.botao:focus {
+    background-color: var(--cor-destaque-hover);
+}
+
+.links-contato {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ============================
+   Rodapé
+   ============================ */
+.rodape {
+    text-align: center;
+    padding: 24px 20px;
+    color: var(--cor-texto);
+    font-size: 0.9rem;
+}
+
+/* ============================
+   Responsividade (celulares)
+   ============================ */
+@media (max-width: 600px) {
+    .container-cabecalho {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .menu ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .apresentacao h2 {
+        font-size: 1.6rem;
+    }
+
+    .secao {
+        padding: 32px 0;
+    }
+}
